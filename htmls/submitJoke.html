@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokester</title>
+    <link rel="stylesheet" href="public/styles.css">
+    
+    
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="disabledBackground"></div>
+    <header>
+        <div class="navbarContainer">
+            <div class="menu2" onclick="displayMenu()"> 
+                <i class= "fi fi-br-menu-burger"></i>
+            </div>
+            <a href="/dashboard" class="Logo"><h2>Jokester</h2></a>
+            <div class="navbarLinks">
+                <a id="logoutLink" href="/home" onclick="logoutUser()">Logout</a>
+            </div>  
+        </div>
+    <header>  
+
+    <main>
+        <div class="userMenuContainer">
+            <i class="fi fi-ss-circle-user"></i>
+            <p><%=userName%></p>
+            <a>View profile</a>
+            <a>Submit Joke</a>
+            <a>Saved Jokes</a>
+            <a>Delete Account</a>
+        </div>
+        <div class="submitJokeForm">
+            <form method="post" >
+                <p>Enter the Joke details </p>
+                <label>Joke Setup: </label>
+                <input type="text" placeholder="Enter the joke title/set-up" name="jokeTitle" required><br>
+                <label>Joke Body :</label>
+                <input type="text" placeholder="Enter the joke body" name="jokeBody" required><br>
+                <input type="submit" value="Submit" id="submitJokeButton">
+            </form>
+            <p id="jokeMessage">Joke submitted</p>
+            <br>
+        </div>
+
+        
+    </main>
+
+    <div class="loginForm">
+        <p id="loginErrorMessage">Error</p>
+        <form method="post" >
+            <p>Enter the login details </p>
+            <input type="email" placeholder="Enter username: ajax34@xyz.com" name="loginEmail" required><br>
+            <input type="password" placeholder="Enter password" name="loginPass" required><br>
+            <input type="submit" value="Login" id="loginButton">
+        </form>
+        <br>
+        <h6>New user? Create an account here:</h6>
+        <a id="createAccButton" href="/register">Register</a>
+    </div>
+
+    <footer>
+        <div class="contactContainer">
+            <h3>Contact</h3>
+            <p><i class="fi fi-bs-marker"></i> Stevens Institute of Technology</p> 
+            <p><i class="fi fi-rr-envelope"></i> utkarshshanker551@gmail.com</p>
+            <p><i class="fi fi-rr-phone-call"></i> +1 551 260 8248</p>
+            <p style="font-size: xx-small; margin-bottom: 0; margin-top: 20px;"> Uicons by <a href="https://www.flaticon.com/uicons" style="color:  rgb(32, 71, 126);">Flaticon</a></p>
+            
+        </div>
+    <footer>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

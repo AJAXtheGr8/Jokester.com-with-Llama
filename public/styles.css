@@ -1,0 +1,319 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat',serif;
+    position: relative;
+}
+
+#disabledBackground{
+    background-color: black;
+    opacity: 0.85;
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.navbarContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: rgb(61, 129, 224);
+}
+
+.navbarContainerRegister{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    background-color: rgb(61, 129, 224);
+}
+
+.Logo{
+    font-family: 'Rubik Doodle Shadow',serif;
+    font-size: 125%;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu, .menu2{
+    margin: 1rem;
+    color: white;
+    font-size: x-large;
+}
+
+.menu:hover, .menu2:hover{
+    color: rgb(32, 71, 126);
+}
+
+#loginLink, #logoutLink{
+    margin-right: 0.5rem;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+
+#loginLink:hover, #logoutLink:hover{
+    background-color: rgb(32, 71, 126);
+    color:  rgb(61, 129, 224);
+    border: 2px solid rgb(32, 71, 126);
+}
+
+.userMenuContainer{
+    color: rgb(32, 71, 126);
+    background-color: rgb(61, 129, 224);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 10px;
+    top: 80px;
+    left: 0;
+    visibility: hidden;
+    transition: 0.1s;
+}
+
+.userMenuContainer-openPopup{
+    visibility: visible;
+}
+
+
+.userMenuContainer a{
+    margin: 0 10px 10px 10px;
+}
+
+.userMenuContainer a:hover{
+    background-color: rgb(32, 71, 126);
+}
+
+.userMenuContainer .fi{
+    font-size: 50px;
+    margin-bottom: -10px;
+}
+
+main{
+    padding: 0.5rem;
+    text-align: center;
+    color: rgb(89, 89, 89);
+    font-size: larger;
+    min-height: 90vh;
+}
+
+.loginForm{
+    background-color: rgb(61, 129, 224);
+    padding: 1rem;
+    text-align: center;
+    position: absolute;
+    width: 350px;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10rem;
+    color: white;
+    border: 3px solid  rgb(32, 71, 126);
+    border-radius: 1rem;
+    visibility: hidden;
+    transform: scale(0.1);
+    transition: transform 0.3s;
+    z-index: 50;
+}
+
+
+.loginForm-openPopup{
+    visibility: visible;
+    transform:  scale(1);
+}
+
+.loginForm input[type=email], .loginForm input[type=password]{
+    width: 15rem;
+    margin: 0.5rem 0.1rem;
+} 
+
+#loginErrorMessage{
+    background-color: rgb(253, 122, 122);
+    color: rgb(195, 75, 75);
+    border-radius: 2px;
+    font-size: large;
+    width: 15rem;
+    margin: auto;
+    display: none;
+}
+
+#createAccButton, #loginButton{
+    background-color:rgb(61, 129, 224);
+    border: 1px solid white;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 12px;
+}
+
+#createAccButton:hover, #loginButton:hover, #registerButton:hover{
+    background-color:rgb(32, 71, 126);
+    border: 1px solid rgb(32, 71, 126);
+    color: rgb(61, 129, 224);
+}
+
+.loginForm input[type=button]{
+    text-decoration: none;
+
+}
+
+.loginForm h6{
+    display: inline;
+}
+
+.registerForm{
+    background-color:  rgb(61, 129, 224);
+    width: fit-content;
+    padding: 2rem;
+    margin: 3rem auto;
+    border: 3px solid   rgb(61, 129, 224);
+    border-radius: 1rem;
+    color: white;
+    
+}
+
+.registerForm input[type=email], .registerForm input[type=password],.registerForm input[type=text] {
+    width: 15rem;
+    margin: 0.5rem 0.1rem;
+} 
+
+#registerButton{
+    background-color:rgb(61, 129, 224);
+    border: 1px solid white;
+    color: white;
+    padding: 3px 7px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+
+.generateJoke, .generateJoke2, .submitJokeForm input[type='submit']{
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid rgb(89, 89, 89);
+    font-size: large;
+    color: rgb(89, 89, 89);
+}
+
+.generateJoke:hover, .generateJoke2:hover, .submitJokeForm input[type='submit']:hover{
+    background-color: rgb(89, 89, 89);
+    color: white;
+}
+
+#jokeOutput{
+    padding-bottom: 10rem;
+}
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(61, 129, 224);
+    color: rgb(32, 71, 126);
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 0; 
+    padding-bottom: 1rem;  
+}
+
+.contactContainer p{
+    margin: 2px 1px 2px 1px;
+}
+
+.contactContainer .fi{
+    position: relative;
+    top: 0.2rem;
+    
+}
+
+
+.submitJokeForm{
+    /* line-height: 3rem; */
+}
+
+.submitJokeForm textarea{
+    /* margin-bottom: 10px; */
+}
+
+#jokeMessage{
+    /* visibility: hidden; */
+}
+
+/* .jokeMessage-visibile{
+    visibility: visible;
+} */
+
+#saveJokeButton{
+    visibility: hidden;
+    position: absolute;
+    right: 3rem;
+}
+
+#userProfile{
+    text-align: left;
+    padding-left: 3rem;
+}
+
+.userProfileJokes{
+    margin-bottom: 10rem;
+}
+
+#savedJokes, #submittedJokes{
+    position: relative;
+    border: 1px solid rgb(89, 89, 89);
+    border-radius: 15px;
+    padding: 2rem;
+    width: fit-content;
+    margin: auto;
+}
+
+#deleteSavedJoke, #deleteSubmittedJoke{
+    border-radius: 15px;
+    border: 1px solid rgb(89, 89, 89);
+    font-size: small;
+    color: rgb(89, 89, 89);
+    position: absolute;
+    top:0.75rem;
+    right: 0.5rem;
+    padding: 3px;
+}
+
+#deleteSavedJoke:hover, #deleteSubmittedJoke:hover{
+    background-color: rgb(233, 55, 55);
+    color: white;
+}
+
+#prevSavedJoke, #prevSubmittedJoke, #nextSavedJoke, #nextSubmittedJoke {
+    border-radius: 15px;
+    border: 1px solid rgb(89, 89, 89);
+    color: rgb(89, 89, 89);
+    top:0.75rem;
+    right: 0.5rem;
+}
+
+#prevSavedJoke:hover, #prevSubmittedJoke:hover, #nextSavedJoke:hover, #nextSubmittedJoke:hover {
+    background-color: rgb(89, 89, 89);
+    color: white;
+
+}
